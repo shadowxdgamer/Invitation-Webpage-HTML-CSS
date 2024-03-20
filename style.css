@@ -13,11 +13,17 @@ body {
 .container {
     background: linear-gradient(to right, #761F17, #840E1A);
     max-width: 600px;
+    width: 90%; /* Adjust as needed */
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     padding: 40px;
     text-align: center;
     animation: fadeIn 2s ease-in;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the container is on top of the video */
 }
 
 @keyframes fadeIn {
@@ -81,9 +87,8 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    height: 56.25vw; /* 9/16 aspect ratio (9 / 16 * 100) */
-    max-height: 100%; /* Ensure the video doesn't overflow vertically */
-    z-index: -1; /* Place it behind your other content */
+    height: 100%;
+    z-index: -1; /* Place the video behind the container */
 }
 
 #background-video {
@@ -116,6 +121,7 @@ p {
     text-decoration-color: white;
     text-underline-offset: 0.2em; /* Adjust this value as needed */
 }
+
 p {
     font-family: 'Alex Brush', cursive; /* Specify the font family */
     font-size: 40px;
