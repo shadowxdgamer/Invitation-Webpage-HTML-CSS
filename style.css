@@ -11,6 +11,7 @@ body {
 }
 
 .container {
+    animation: fadeIncontainer 2s ease-in;
     background: linear-gradient(to right, #761F17, #840E1A);
     max-width: 600px;
     width: 90%; /* Adjust as needed */
@@ -18,12 +19,12 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     padding: 40px;
     text-align: center;
-    animation: fadeIn 2s ease-in;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure the container is on top of the video */
+    
 }
 
 @keyframes fadeIn {
@@ -34,6 +35,14 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes fadeIncontainer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
