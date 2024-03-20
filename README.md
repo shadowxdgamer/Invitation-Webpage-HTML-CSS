@@ -11,7 +11,7 @@ This project is a simple school project for creating an invitation webpage using
 
 ## Live Website Preview
 
-You can view a live preview of the invitation webpage [here](https://your-username.github.io/Invitation-Webpage-HTML-CSS/).
+You can view a live preview of the invitation webpage [here](https://shadowxdgamer.github.io/Invitation-Webpage-HTML-CSS/).
 
 ## How to Use
 
