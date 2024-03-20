@@ -1,0 +1,123 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: linear-gradient(to right, #761F17, #840E1A);
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff7f50;
+    font-size: 3rem;
+    margin: 0 0 20px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    animation: neonGlow 1.5s linear infinite alternate;
+}
+
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 10px #ff7f50, 0 0 20px #ff7f50;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff5b36, 0 0 30px #ff5b36;
+    }
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ff7f50;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+h1:hover::before {
+    transform: scaleX(1);
+}
+
+p {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56.25vw; /* 9/16 aspect ratio (9 / 16 * 100) */
+    max-height: 100%; /* Ensure the video doesn't overflow vertically */
+    z-index: -1; /* Place it behind your other content */
+}
+
+#background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 2s ease-in;
+}
+
+@font-face {
+    font-family: 'Dancing Script'; /* Your chosen font name */
+    src: url('DancingScript-Regular.ttf') format('woff2'),
+         url('DancingScript-Regular.tff') format('woff');
+    /* Add other font formats if available */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alex Brush'; /* Your chosen font name */
+    src: url('AlexBrush-Regular.ttf') format('woff2'),
+         url('AlexBrush-Regular.ttf') format('woff');
+    /* Add other font formats if available */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-underline-offset: 0.2em; /* Adjust this value as needed */
+}
+p {
+    font-family: 'Alex Brush', cursive; /* Specify the font family */
+    font-size: 40px;
+    color: #000;
+}
